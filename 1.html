@@ -3,12 +3,33 @@
 <head>
 	<meta charset="UTF-8">
 	<title></title>
+<style>
+*{
+	margin: 0;
+	padding: 0;
+}
+.active{
+	background:yellowgreen;
+}
+div{
+	width:100px;
+	height: 100px;
+	border: 1px solid #000;
+	display: none;
+}
+div.show{
+	display: block;
+}
+
+
+
+</style>
 </head>
 <body>
-	<input type="button" name="" id="" value="btn1" />
+	<input type="button" name="" id="" value="btn1" class="active" />
 	<input type="button" name="" id="" value="btn2" />
 	<input type="button" name="" id="" value="btn3" />
-	<div>11111</div>
+	<div class="show">11111</div>
 	<div>22222</div>
 	<div>33333</div>
 <script src="1.js" type="text/javascript" charset="utf-8"></script>
