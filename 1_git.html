@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+<script type="text/javascript">
+	/*
+		SVN:
+			版本控制工具
+			集成式
+			
+		git:
+			版本控制工具
+			分布式
+			
+		github:
+			网站（程序员基友网站）
+			
+		1.github账号
+		
+		2.git
+		
+		绑定
+		
+		ssh -T git@github.com  (查看是否绑定成功)
+		
+		设置贡献者：
+			git config --global user.name "用户名"
+			
+			git config --global user.email "注册邮箱"
+			
+		
+		在github上创建一个项目
+		
+		
+		然后把项目放到本地
+		
+		查看工作状态：
+			git status
+			
+		工作区到暂存区
+			git add 文件名
+			
+			多个文件名一起放到暂存区
+				git add .
+			
+		暂存区到版本区
+			git commit -m "英文注释"
+			
+		工作区直接到版本区：
+			git commit -a -m "英文注释";
+			
+		查看版本：
+			git log
+		
+		
+		
+		查看：
+			
+			查看工作区与暂存区的差异：
+				git diff
+			
+			查看暂存区与版本区的差异:
+				git diff --cached
+				
+			查看工作区与版本区的差异：
+				
+				git diff master
+			
+			git checkout 版本号  文件名
+		
+		撤销：
+		
+		从暂存区撤销回工作区：
+			git reset HEAD 文件名
+		
+		
+		工作区的代码要还原到暂存区或版本区 
+		（有暂存区优先暂存区，没有则还原版本区）
+			git checkout -- 文件名
+			
+		
+		如果有2个以上文件需要提交，一个提交到版本库了，另一个忘记提交，可以先将另一个文件拉到暂存区，然后通过
+git commit -m “注释”--amend 撤销回来，最后自动一次性提交暂存区中的文件
+git log查看是否提交成功
+
+		
+		删除：
+			手动删除了工作区，也想删除暂存区
+			
+				git rm 文件名
+			
+			一次性（工作区及暂存区）彻底删除某个文件
+				
+				git rm -f 文件名
+				
+			只删除暂存区，不删除工作区
+				
+				git rm --cached 文件名
+				
+		恢复（回滚）
+			
+			git log 查看版本号
+			
+			一次性还原整个版本文件
+				git reset --hard 版本号
+				
+			还原指定文件
+				git checkout 版本号 文件名
+			
+			往前找版本（默认倒数第二个）
+				git reset --hard HEAD^
+				再次输入再往上翻一个 .....
+			
+			跳过几个版本（包含目标版本）还原
+				git reset --hard HEAD~3
+			
+			git reflog  (查看操作的版本)
+			
+		
+		如何将版本放到github上
+			git push origin master
+			
+		origin默认的远程仓库的名字
+			
+			查看: git remote
+			
+			查看:拉取地址及推送地址
+				git remote -v
+			
+			
+	*/
+</script>
+</body>
+</html>
