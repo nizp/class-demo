@@ -20,6 +20,7 @@ Tab.prototype.clear = function(that){
 		this.div[i].className = '';
 	}
 	that.className = 'active';
+	this.div[that.index].className = 'hxsh';
 	//console.log(index)
 
 }
