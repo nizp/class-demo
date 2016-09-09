@@ -4,14 +4,23 @@ function Tab(){
 }
 
 Tab.prototype.init = function(){
+	var _this = this;
 	for(var i=0;i<this.btn.length;i++){
-		this.btn[i].addEventListener('click',Click);
-		function(){
-			
-		}
+		(function(index){
+			_this.btn[i].addEventListener('click',Click);
+			function Click(){
+				_this.clear(index);
+			}
+		})(i);
 	}
 }
 
-Tab.prototype.clear = function(){
-	
+Tab.prototype.clear = function(index){
+	for(var i=0;i<this.btn.length;i++){
+		this.btn[i].className = '';
+		this.div[i].className = '';
+	}
+	this.btn[index].className = 'active';
+	//console.log(index)
+
 }
