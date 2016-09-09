@@ -4,21 +4,12 @@ function Tab(){
 }
 
 Tab.prototype.init = function(){
-<<<<<<< HEAD
 	var that = this;
 	for(var i=0;i<this.btn.length;i++){
 		(function(index){
 			that.btn[i].addEventListener('click',Click);
 			function Click(){
 				that.clear(index);
-=======
-	var _this = this;
-	for(var i=0;i<this.btn.length;i++){
-		(function(index){
-			_this.btn[i].addEventListener('click',Click);
-			function Click(){
-				_this.clear(index);
->>>>>>> origin/master
 			}
 		})(i);
 	}
